@@ -2,20 +2,58 @@ name: Sync Codewars Solutions
 
 on:
   schedule:
-    # Runs automatically every day at midnight (UTC)
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allows you to run it manually anytime
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Fetch and Commit Codewars Solutions
-        uses: joshfinnie/codewars-sync@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          username: 'mekehere'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 20
+
+      - name: Sync Codewars
+        run: |
+          node -e '
+          const fs = require("fs");
+          const username = "mekehere";
+
+          async function fetchCompleted() {
+            const res = await fetch(`https://www.codewars.com/api/v1/users/${username}/code-challenges/completed`);
+            const data = await res.json();
+            if (!data.data) {
+              console.log("No data returned or user not found.");
+              return;
+            }
+
+            fs.writeFileSync("COMPLETED_KATAS.json", JSON.stringify(data.data, null, 2));
+            
+            let markdown = "# Codewars Completed Challenges\n\n";
+            markdown += `Total Completed: **${data.totalItems || data.data.length}**\n\n`;
+            markdown += "| Challenge | Languages | Completed At |\n| --- | --- | --- |\n";
+            
+            for (const item of data.data) {
+              markdown += `| [${item.name}](https://www.codewars.com/kata/${item.id}) | ${(item.completedLanguages || []).join(", ")} | ${item.completedAt.split("T")[0]} |\n`;
+            }
+            
+            fs.writeFileSync("README.md", markdown);
+          }
+
+          fetchCompleted();
+          '
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md COMPLETED_KATAS.json
+          git commit -m "Auto-sync Codewars completed katas" || echo "No changes to commit"
+          git push
