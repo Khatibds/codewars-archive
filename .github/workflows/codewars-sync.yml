@@ -1,0 +1,21 @@
+name: Sync Codewars Solutions
+
+on:
+  schedule:
+    # Runs automatically every day at midnight (UTC)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows you to run it manually anytime
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch and Commit Codewars Solutions
+        uses: joshfinnie/codewars-sync@v1
+        with:
+          username: 'mekehere'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
