@@ -1,5 +1,14 @@
 [
   {
+    "id": "55cb632c1a5d7b3ad0000145",
+    "name": "Keep up the hoop",
+    "slug": "keep-up-the-hoop",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-08-29T19:20:58.511Z"
+  },
+  {
     "id": "55cbd4ba903825f7970000f5",
     "name": "Grasshopper - Grade book",
     "slug": "grasshopper-grade-book",
