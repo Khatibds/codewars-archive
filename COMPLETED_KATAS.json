@@ -6,7 +6,8 @@
     "completedLanguages": [
       "javascript"
     ],
-    "completedAt": "2026-09-08T10:17:39.604Z"
+    "completedAt": "2026-09-08T10:17:39.604Z",
+    "rankName": "8 kyu"
   },
   {
     "id": "55cb632c1a5d7b3ad0000145",
@@ -15,7 +16,8 @@
     "completedLanguages": [
       "javascript"
     ],
-    "completedAt": "2026-08-29T19:20:58.511Z"
+    "completedAt": "2026-08-29T19:20:58.511Z",
+    "rankName": "8 kyu"
   },
   {
     "id": "55cbd4ba903825f7970000f5",
@@ -24,7 +26,8 @@
     "completedLanguages": [
       "javascript"
     ],
-    "completedAt": "2026-08-27T07:14:13.310Z"
+    "completedAt": "2026-08-27T07:14:13.310Z",
+    "rankName": "8 kyu"
   },
   {
     "id": "544675c6f971f7399a000e79",
@@ -33,7 +36,8 @@
     "completedLanguages": [
       "javascript"
     ],
-    "completedAt": "2026-08-27T07:05:49.041Z"
+    "completedAt": "2026-08-27T07:05:49.041Z",
+    "rankName": "8 kyu"
   },
   {
     "id": "53dc54212259ed3d4f00071c",
@@ -42,7 +46,8 @@
     "completedLanguages": [
       "javascript"
     ],
-    "completedAt": "2026-08-27T06:34:13.016Z"
+    "completedAt": "2026-08-27T06:34:13.016Z",
+    "rankName": "8 kyu"
   },
   {
     "id": "50654ddff44f800200000004",
@@ -51,6 +56,7 @@
     "completedLanguages": [
       "javascript"
     ],
-    "completedAt": "2026-08-27T03:01:49.702Z"
+    "completedAt": "2026-08-27T03:01:49.702Z",
+    "rankName": "8 kyu"
   }
 ]
