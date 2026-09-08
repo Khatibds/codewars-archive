@@ -11,6 +11,9 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_RUNNER_FORCE_NODE24_WARNING: "false"
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -24,7 +27,7 @@ jobs:
         run: |
           node -e '
           const fs = require("fs");
-          const username = "YOUR_ACTUAL_CODEWARS_USERNAME"; // <-- REPLACE THIS
+          const username = "Khatibds";
 
           async function fetchCompleted() {
             let page = 0;
