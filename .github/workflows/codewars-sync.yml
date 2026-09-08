@@ -24,26 +24,44 @@ jobs:
         run: |
           node -e '
           const fs = require("fs");
-          const username = "mekehere";
+          const username = "YOUR_ACTUAL_CODEWARS_USERNAME"; // <-- REPLACE THIS
 
           async function fetchCompleted() {
-            const res = await fetch(`https://www.codewars.com/api/v1/users/${username}/code-challenges/completed`);
-            const data = await res.json();
-            if (!data.data) {
+            let page = 0;
+            let totalPages = 1;
+            const allKatas = [];
+
+            while (page < totalPages) {
+              const res = await fetch(`https://www.codewars.com/api/v1/users/${username}/code-challenges/completed?page=${page}`);
+              if (!res.ok) {
+                console.error(`Failed to fetch: HTTP ${res.status}`);
+                break;
+              }
+              const data = await res.json();
+              if (!data.data || data.data.length === 0) break;
+
+              totalPages = data.totalPages || 1;
+              allKatas.push(...data.data);
+              page++;
+            }
+
+            if (allKatas.length === 0) {
               console.log("No data returned or user not found.");
               return;
             }
 
-            fs.writeFileSync("COMPLETED_KATAS.json", JSON.stringify(data.data, null, 2));
-            
+            fs.writeFileSync("COMPLETED_KATAS.json", JSON.stringify(allKatas, null, 2));
+
             let markdown = "# Codewars Completed Challenges\n\n";
-            markdown += `Total Completed: **${data.totalItems || data.data.length}**\n\n`;
+            markdown += `Total Completed: **${allKatas.length}**\n\n`;
             markdown += "| Challenge | Languages | Completed At |\n| --- | --- | --- |\n";
-            
-            for (const item of data.data) {
-              markdown += `| [${item.name}](https://www.codewars.com/kata/${item.id}) | ${(item.completedLanguages || []).join(", ")} | ${item.completedAt.split("T")[0]} |\n`;
+
+            for (const item of allKatas) {
+              const langs = (item.completedLanguages || []).join(", ");
+              const date = item.completedAt ? item.completedAt.split("T")[0] : "N/A";
+              markdown += `| [${item.name}](https://www.codewars.com/kata/${item.id}) | ${langs} | ${date} |\n`;
             }
-            
+
             fs.writeFileSync("README.md", markdown);
           }
 
