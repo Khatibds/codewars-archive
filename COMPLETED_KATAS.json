@@ -1,5 +1,14 @@
 [
   {
+    "id": "515e271a311df0350d00000f",
+    "name": "Square(n) Sum",
+    "slug": "square-n-sum",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-09-08T10:17:39.604Z"
+  },
+  {
     "id": "55cb632c1a5d7b3ad0000145",
     "name": "Keep up the hoop",
     "slug": "keep-up-the-hoop",
