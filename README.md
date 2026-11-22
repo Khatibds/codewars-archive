@@ -1,9 +1,11 @@
 # Codewars Completed Challenges
 
-Total Completed: **6**
+Total Completed: **8**
 
 | Challenge | Rank | Languages | Completed At |
 | --- | --- | --- | --- |
+| [Convert boolean values to strings 'Yes' or 'No'.](https://www.codewars.com/kata/53369039d7ab3ac506000467) | 8 kyu | javascript | 2026-11-22 |
+| [SpeedCode #2 - Array Madness](https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1) | 8 kyu | javascript | 2026-11-19 |
 | [Square(n) Sum](https://www.codewars.com/kata/515e271a311df0350d00000f) | 8 kyu | javascript | 2026-09-08 |
 | [Keep up the hoop](https://www.codewars.com/kata/55cb632c1a5d7b3ad0000145) | 8 kyu | javascript | 2026-08-29 |
 | [Grasshopper - Grade book](https://www.codewars.com/kata/55cbd4ba903825f7970000f5) | 8 kyu | javascript | 2026-08-27 |

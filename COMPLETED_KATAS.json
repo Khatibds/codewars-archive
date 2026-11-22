@@ -1,5 +1,25 @@
 [
   {
+    "id": "53369039d7ab3ac506000467",
+    "name": "Convert boolean values to strings 'Yes' or 'No'.",
+    "slug": "convert-boolean-values-to-strings-yes-or-no",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-11-22T01:25:31.904Z",
+    "rankName": "8 kyu"
+  },
+  {
+    "id": "56ff6a70e1a63ccdfa0001b1",
+    "name": "SpeedCode #2 - Array Madness",
+    "slug": "speedcode-number-2-array-madness",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-11-19T20:46:25.596Z",
+    "rankName": "8 kyu"
+  },
+  {
     "id": "515e271a311df0350d00000f",
     "name": "Square(n) Sum",
     "slug": "square-n-sum",
