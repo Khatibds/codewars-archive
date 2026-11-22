@@ -1,9 +1,10 @@
 # Codewars Completed Challenges
 
-Total Completed: **8**
+Total Completed: **9**
 
 | Challenge | Rank | Languages | Completed At |
 | --- | --- | --- | --- |
+| [Convert a Boolean to a String](https://www.codewars.com/kata/551b4501ac0447318f0009cd) | 8 kyu | javascript | 2026-11-22 |
 | [Convert boolean values to strings 'Yes' or 'No'.](https://www.codewars.com/kata/53369039d7ab3ac506000467) | 8 kyu | javascript | 2026-11-22 |
 | [SpeedCode #2 - Array Madness](https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1) | 8 kyu | javascript | 2026-11-19 |
 | [Square(n) Sum](https://www.codewars.com/kata/515e271a311df0350d00000f) | 8 kyu | javascript | 2026-09-08 |
