@@ -1,9 +1,12 @@
 # Codewars Completed Challenges
 
-Total Completed: **9**
+Total Completed: **12**
 
 | Challenge | Rank | Languages | Completed At |
 | --- | --- | --- | --- |
+| [Grasshopper - Check for factor](https://www.codewars.com/kata/55cbc3586671f6aa070000fb) | 8 kyu | javascript | 2026-11-22 |
+| [Are You Playing Banjo?](https://www.codewars.com/kata/53af2b8861023f1d88000832) | 8 kyu | javascript | 2026-11-22 |
+| [Beginner - Lost Without a Map](https://www.codewars.com/kata/57f781872e3d8ca2a000007e) | 8 kyu | javascript | 2026-11-22 |
 | [Convert a Boolean to a String](https://www.codewars.com/kata/551b4501ac0447318f0009cd) | 8 kyu | javascript | 2026-11-22 |
 | [Convert boolean values to strings 'Yes' or 'No'.](https://www.codewars.com/kata/53369039d7ab3ac506000467) | 8 kyu | javascript | 2026-11-22 |
 | [SpeedCode #2 - Array Madness](https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1) | 8 kyu | javascript | 2026-11-19 |

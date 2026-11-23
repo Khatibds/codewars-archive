@@ -1,5 +1,35 @@
 [
   {
+    "id": "55cbc3586671f6aa070000fb",
+    "name": "Grasshopper - Check for factor",
+    "slug": "grasshopper-check-for-factor",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-11-22T06:52:04.229Z",
+    "rankName": "8 kyu"
+  },
+  {
+    "id": "53af2b8861023f1d88000832",
+    "name": "Are You Playing Banjo?",
+    "slug": "are-you-playing-banjo",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-11-22T06:40:25.086Z",
+    "rankName": "8 kyu"
+  },
+  {
+    "id": "57f781872e3d8ca2a000007e",
+    "name": "Beginner - Lost Without a Map",
+    "slug": "beginner-lost-without-a-map",
+    "completedLanguages": [
+      "javascript"
+    ],
+    "completedAt": "2026-11-22T06:28:03.958Z",
+    "rankName": "8 kyu"
+  },
+  {
     "id": "551b4501ac0447318f0009cd",
     "name": "Convert a Boolean to a String",
     "slug": "convert-a-boolean-to-a-string",
